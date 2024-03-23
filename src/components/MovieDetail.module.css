@@ -1,0 +1,116 @@
+.details {
+    line-height: 1.4;
+    font-size: 1.4rem;
+  }
+  
+  .details header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media screen and (min-width: 898px) {
+    .details header {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  .details section {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  
+  .details img {
+    width: 85%;
+  }
+  
+  @media screen and (min-width: 898px) {
+    .details img {
+      width: 33%;
+    }
+  }
+  
+  .details-overview {
+    width: 100%;
+    padding: 1.5rem 2.5rem;
+    background-color: var(--color-background-100);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.4rem;
+  }
+  
+  @media screen and (min-width: 898px) {
+    .details-overview {
+      padding: 2.4rem 3rem;
+      background-color: var(--color-background-100);
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap: 1.4rem;
+    }
+  }
+  
+  .details-overview h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.1;
+  }
+  
+  .details-overview p {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .rating {
+    border-radius: 0.9rem;
+    padding: 1rem;
+    font-weight: 600;
+    display: flex;
+    flex-basis: 2;
+    flex-direction: column;
+    gap: 2rem;
+    margin-right: 4rem;
+  }
+  
+  .btn-add {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    border-radius: 10rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .btn-add:hover {
+    background-color: var(--color-primary-light);
+  }
+
+  .btn-back {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.6rem;
+    height: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    /* background-color: var(--color-text); */
+    background-color: #ffffffc0;
+    color: var(--color-background-900);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    font-family: sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
