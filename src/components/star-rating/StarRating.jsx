@@ -2,16 +2,23 @@ import Star from "./Star";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
+// object for inline styles of the container
 const containerStyle = {
   display: "flex",
   alignItems: "center",
   gap: "16px",
 };
 
+// object for inline styles of the star container
 const starContainerStyle = {
   display: "flex",
 };
 
+/*
+ the <StarRating /> component takes in 7 props which are meant to allow this component to be reusable
+and used in different scenarios across different apps.
+Default values are used for the props for when users do not assign prop values to the component
+*/
 export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
@@ -24,6 +31,7 @@ export default function StarRating({
   const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
 
+  // object defining inline styles for the numbers displayed when user hovers over and selects a number of starts
   const textStyle = {
     lineHeight: "1",
     margin: "0",
@@ -38,6 +46,7 @@ export default function StarRating({
   return (
     <div style={containerStyle} className={className}>
       <div style={starContainerStyle}>
+        
         {Array.from({ length: maxRating }, (_, i) => (
           <Star
             key={i}

@@ -1,4 +1,4 @@
-import Main from "./components/ui/Main";
+import MainBox from "./components/ui/MainBox";
 import { useState } from "react";
 import { useMovies } from "./hooks/useMovies";
 import { useLocalStorageState } from "./hooks/useLocalStorageState";
@@ -17,7 +17,7 @@ import ErrorMessage from "./components/ui/ErrorMesage";
 export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
-  const { movies, isLoading, error } = useMovies(query, handleCloseMovie);
+  const { movies, isLoading, error } = useMovies(query, "s", handleCloseMovie);
   const [watched, setWatched] = useLocalStorageState([], "watched");
 
   function handleSelectMovie(id) {
@@ -47,13 +47,13 @@ export default function App() {
       <NavBar>
         <Logo />
         <Search query={query} setQuery={setQuery} />
-        <NumResults movies={movies} />
+        <NumResults movies={movies.Search || ""} />
       </NavBar>
-      <Main>
+      <MainBox>
         <Box>
           {isLoading && <Loader />}
           {!isLoading && !error && (
-            <MovieList  onSelectMovie={handleSelectMovie} movies={movies} />
+            <MovieList  onSelectMovie={handleSelectMovie} movies={movies.Search} />
           )}
           {error && <ErrorMessage message={error} />}
         </Box>
@@ -75,7 +75,7 @@ export default function App() {
             </>
           )}
         </Box>
-      </Main>
+      </MainBox>
     </>
   );
 }

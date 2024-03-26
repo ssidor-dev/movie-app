@@ -1,0 +1,16 @@
+.main {
+    margin-top: 2.4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2.4rem;
+    justify-content: center;
+  }
+  
+  @media screen and (min-width: 648px) {
+    .main {
+      height: calc(100vh - 7.2rem - 3 * 2.4rem);
+      display: flex;
+      flex-direction: row;
+    }
+  }

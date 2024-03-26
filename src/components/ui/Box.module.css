@@ -8,19 +8,6 @@
     margin: 0 auto;
     padding: 2rem 0.5rem;
   }
-  
-  @media screen and (min-width: 648px) {
-    .box {
-      width: 42rem;
-      max-width: 42rem;
-      background-color: var(--color-background-500);
-      border-radius: 0.9rem;
-      overflow-y: scroll;
-      position: relative;
-      margin: 0;
-      padding: 0;
-    }
-  }
 
   .btn-toggle {
     position: absolute;
@@ -60,4 +47,13 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: var(--color-background-900);
+  }
+
+  @media screen and (min-width: 648px) {
+    .box {
+      width: 42rem;
+      max-width: 42rem;
+      margin: 0;
+      padding: 0;
+    }
   }

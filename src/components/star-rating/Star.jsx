@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 
+/*
+ the <Star /> component takes in props passed in from the direct parent component <StarRating />
+*/
 export default function Star({
   onRate,
   full,
@@ -58,7 +61,7 @@ Star.propTypes = {
   onHoverOut: PropTypes.func,
   color: PropTypes.string,
   size: PropTypes.number,
-}
+};
 
 /*
 FULL STAR

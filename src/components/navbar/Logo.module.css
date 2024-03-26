@@ -1,25 +1,22 @@
 .logo {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    gap: 0.8rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo span {
+  font-size: 3.2rem;
+}
+
+.logo h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+@media screen and (min-width: 898px) {
+  .logo {
+    justify-self: start;
   }
-  
-  @media screen and (min-width: 898px) {
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-self: start;
-      gap: 0.8rem;
-    }
-  }
-  
-  .logo span {
-    font-size: 3.2rem;
-  }
-  
-  .logo h1 {
-    font-size: 2.4rem;
-    font-weight: 600;
-    color: #fff;
-  }
+}
